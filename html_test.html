@@ -117,11 +117,58 @@
         字体大小 font-size:<br />
         字体粗细 font-weight:<br />
         字体样式 font-style:<br />
+        font: font-style font-weight font-size/line-height font-family;<br />
         文本对齐 text-align:<br />
         文本装饰 text-decoration:<br />
         文本缩进 text-indent:<br />
-        行间距 line-height:<br />
-
+        行间距(行高) line-height:<br />
+        垂直居中技巧:行高=盒子高度<br />
+    </p>
+    <p>
+        复合选择器:<br />
+        后代选择器 father 后代{}（可选择任意后代）<br />
+        子元素选择器 father>son{}（只选择子代）<br />
+        并集选择器a,<br />b{}(同时选择)<br />
+        链接伪类选择器:<br />
+        未访问链接样式 a: link{}<br />
+        已访问链接样式 a: visited{}<br />
+        鼠标经过链接样式 a:hover{}<br />
+        按住时链接样式 a: active{}<br />
+        <a href="#">测试链接</a><br />
+        焦点伪类选择器 xxx(input):focus{}<br />
+        测试表单: <input type="text">&nbsp;<input type="text" /><br />
+    </p>
+    <p>
+        ->行内元素 display:block;<br />
+        ->块元素 display:inline;<br />
+        ->行内元素 display:inline-block;<br />
+    </p>
+    <p>
+        背景设置:<br />
+        背景颜色: background-color: transparent(透明)/颜色;<br />
+        背景图片: background-image: none(无)/url(url);<br />
+        背景平铺: background-repeat: repeat/no-repeat/repeat-x/repeat-y;<br />
+        背景位置: background-position: x y;(可使用精确值或方位名词)<br />
+        背景固定（附着）: background-attachment: scroll(随内容滚动)/fixed(固定);<br />
+        background: 背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;<br />
+        背景半透明: background: rgba(r,g,b,alpha);alpha 透明度（0~1）<br />
+    </p>
+    <p>
+        css选择器优先级:<br />
+    <table>
+        <thead>
+        <tr><th>选择器</th> <th>选择器权重</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>继承 或者 *</td> <td>0,0,0,0</td></tr>
+        <tr><td>元素选择器</td> <td>0,0,0,1</td></tr>
+        <tr><td>类选择器，伪类选择器</td> <td>0,0,1,0</td></tr>
+        <tr><td>id选择器</td> <td>0,1,0,0</td></tr>
+        <tr><td>行内样式 style=""</td> <td>1,0,0,0</td></tr>
+        <tr><td>!important</td> <td>无穷大</td></tr>
+        </tbody>
+    </table>
+    复合选择器中权重考虑叠加(只相加不进位)<br />
     </p>
 </body>
 </html>

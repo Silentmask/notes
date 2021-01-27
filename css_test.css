@@ -8,3 +8,20 @@ h1 {
 #css{
     color: indigo;
 }
+a:link{
+    color: black;
+    text-decoration: none;
+}
+a:visited{
+    color: grey;
+    /*text-decoration: none;*/
+}
+a:hover{
+    color: gold;
+}
+a:active{
+    color: purple;
+}
+input:focus{
+    background-color: pink;
+}
