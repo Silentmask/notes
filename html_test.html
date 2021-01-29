@@ -170,5 +170,70 @@
     </table>
     复合选择器中权重考虑叠加(只相加不进位)<br />
     </p>
+    <p>
+        盒子边框 border:<br />
+        border: border-width(定义边框粗细，px) || border-style(边框样式) || border-color(边框颜色)<br />
+        上边框 border-top<br />
+        下边框 border-bottom<br />
+        左边框 border-left<br />
+        右边框 border-right<br />
+        表格边框合并 border-collapse:collapse;<br />
+        盒子内边距 padding:<br />
+        上内边距 padding-top<br />
+        下内边距 padding-bottom<br />
+        左内边距 padding-left<br />
+        右内边距 padding-right<br />
+        padding: a; (上下左右内边距都是a) <br />
+        padding: a b; (上下内边距是a，左右内边距是b)<br />
+        padding: a b c; (上内边距是a，左右内边距是b，下内边距是c)<br />
+        padding: a b c d; (上内边距是a，右内边距是b，下内边距是c，左内边距是d)<br />
+        盒子外边距 margin:<br />
+        上外边距 margin-top<br />
+        下外边距 margin-bottom<br />
+        左外边距 margin-left<br />
+        右外边距 margin-right<br />
+        margin复合简写规则与padding相同<br />
+        相邻盒子上下外边距会合并（去较大值）<br />
+        块级盒子水平居中 1、指定宽度 2、左右外边框设为auto<br />
+        清除浏览器自带内外边距
+        *{
+            padding:0;
+            margin:0;
+        }<br />
+        圆角边框 border-radius: length(半径);<br />
+        border-radius:左上 右上 右下 左下;<br />
+        单独设置 border-top/bottom-left/right-radius:<br />
+        盒子阴影 box-shadow:h-shadow(水平阴影位置) v-shadow(垂直阴影位置) blur(模糊距离) spread(阴影尺寸) color(阴影颜色) inset(将外部阴影(outset)改为内部阴影);<br />
+        文字阴影 text-shadow: h-shadow(水平阴影位置) v-shadow(垂直阴影位置) blur(模糊距离) color(阴影颜色);
+    </p>
+    <p>
+        浮动:<br />
+        选择器{
+            float: 属性值(不浮动 none/向左浮动 left/向右浮动 right);
+        }<br />
+        清除浮动:<br />
+        1.选择器{
+            clear: 属性值(清除两边浮动 both/清除向左浮动 left/清除向右浮动 right);
+        }<br />
+        2.父元素overflow: hidden;<br />
+        3.父元素.clearfix:after{
+            content:"";
+            display:block;
+            height:0;
+            clear:both;
+            visibility:hidden;
+        }<br />
+        4.父元素.clearfix:before,.clearfix:after{
+            content:"";
+            display:table;
+        }<br />
+        .clearfix:after{
+            clear:both;
+        }<br />
+        注:为兼容IE6、7:<br />
+        .clearfix{
+        *zoom:1;
+        }<br />
+    </p>
 </body>
 </html>
