@@ -546,7 +546,7 @@
     </p>
     <p>
         注册/添加事件<br />
-        eventTarget.addEventListener(type,listener[, useCapture]);<br />
+        eventTarget.addEventListener(type,listener[, useCapture:true处于捕获阶段/false处于冒泡阶段]);<br />
         type:事件类型字符串（click）<br />
         listener:事件处理函数<br />
         useCapture:可选 布尔值<br />
@@ -554,8 +554,18 @@
         eventNameWithOn:事件类型字符串（onclick）<br />
         callback:事件处理函数<br />
         删除事件<br />
-        eventTarget.removeEventListener(type,listener[, useCapture]);<br />
+        eventTarget.removeEventListener(type,listener[, useCapture:true处于捕获阶段/false处于冒泡阶段]);<br />
         eventTarget.detachEvent(eventNameWithOn, callback);<br />
+    </p>
+    <p>
+        事件对象<br />
+        e.target (返回触发事件的对象 标准)<br />
+        e.srcElement (返回触发事件的对象 非标准)<br />
+        e.type (返回事件类型（click）)<br />
+        e.cancelBubble (阻止冒泡 非标准)<br />
+        e.returnValue (阻止默认事件 非标准)<br />
+        e.preventDefault() (阻止默认事件 标准)<br />
+        e.stopPropagation() (阻止冒泡 标准)<br />
     </p>
 </body>
 </html>
