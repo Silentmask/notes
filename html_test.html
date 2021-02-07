@@ -567,5 +567,60 @@
         e.preventDefault() (阻止默认事件 标准)<br />
         e.stopPropagation() (阻止冒泡 标准)<br />
     </p>
+    <h3>BOM</h3>
+    <p>
+        window.setTimeout(调用函数[,延迟的毫秒数]);(设置定时器)<br />
+        window.clearTimeout(timeout ID);(停止计时器)<br />
+        window.setInterval(调用函数[,延迟的毫秒数]);(设置定时器 重复调用)<br />
+        window.clearInterval(interval ID);(停止计时器)<br />
+    </p>
+    <p>
+        URL<br />
+        protocol://host[:port]/path/[?query]#fragment
+        protocol (通信协议)<br />
+        host (主机（域名）)<br />
+        port (端口号)<br />
+        path (路径)<br />
+        query (参数，键值对，&分隔)<br />
+        fragment (片段，链接 锚点)<br />
+        <br />
+        location.href (获取或设置 URL)<br />
+        location.host (返回主机（域名）)<br />
+        location.port (返回端口号)<br />
+        location.pathname (返回路径)<br />
+        location.search (返回参数)<br />
+        location.hash (返回片段)<br />
+        location.assign(跳转页面（重定向页面）) ()<br />
+        location.replace(替换当前页面，无法后退) ()<br />
+        location.reload(重新加载页面) ()<br />
+        <br />
+        navigation对象 浏览器版本<br />
+        <br />
+        history.back() (后退)<br />
+        history.forward() (前进)<br />
+        history.go() (前进后退 正数前进，复数后退)<br />
+    </p>
+    <h3>offset元素偏移量</h3>
+    <p>
+        element.offsetParent (该元素带有定位的父级元素)<br />
+        element.offsetTop (元素相对带有定位父元素上方的偏移量)<br />
+        element.offsetLeft (元素相对带有定位父元素左边框的偏移量)<br />
+        element.offsetWidth (自身包括内边距，边框，内容的宽度（不含单位）)<br />
+        element.offsetHeight (自身包括内边距，边框，内容的高度（不含单位）)<br />
+    </p>
+    <h3>client元素可视区</h3>
+    <p>
+        element.clientTop (元素上边框大小)<br />
+        element.clientLeft (元素左边框大小)<br />
+        element.clientWidth (自身包括内边距，内容的宽度（不含边框，不含单位）)<br />
+        element.clientHeight (自身包括内边框，内容的高度（不含边框，不含单位）)<br />
+    </p>
+    <h3>scroll</h3>
+    <p>
+        element.scrollTop (被卷去的上侧距离（不含单位）)<br />
+        element.scrollLeft (被卷去的左侧距离（不含单位）)<br />
+        element.scrollWidth (自身实际的宽度（不含边框，不含单位）)<br />
+        element.scrollHeight (自身实际高度（不含边框，不含单位）)<br />
+    </p>
 </body>
 </html>
