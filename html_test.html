@@ -5,6 +5,9 @@
     <title>页面标题 html_test</title>
     <link rel="stylesheet" href="css_test.css" />
     <script src="javascript_test.js"></script>
+<!--    <script src="vue.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <h1 class="head">HTML</h1><hr />
@@ -621,6 +624,54 @@
         element.scrollLeft (被卷去的左侧距离（不含单位）)<br />
         element.scrollWidth (自身实际的宽度（不含边框，不含单位）)<br />
         element.scrollHeight (自身实际高度（不含边框，不含单位）)<br />
+    </p>
+    <h1>Vue.js</h1>
+    <p>
+
+        html:<br />
+        <div id="app" >
+        {{message}}
+        </div>
+
+        <br />
+        js:<br />
+        var app=new Vue({
+            el:"#app",
+            data:{
+                message:"Hello world"
+            }
+        })
+        <br />
+    </p>
+    <p>
+        事件绑定<br />
+        html:<br />
+        <div id="xapp">
+        <input type="button" v-on:click="dolt">
+        </div>
+        <br />
+        js:<br />
+        var app=new Vue({
+            el:"#app",
+            methods:{
+                dolt:function(){}
+            }
+        })
+        <br />
+    </p>
+    <p>
+        v-text (内容（文本）)<br />
+        v-html (内容（html）)<br />
+        v-if (如果)<br />
+        v-for (循环)<br />
+        v-show (是否显示)<br />
+        v-bind (设置属性)<br />
+        v-model (双向绑定)<br />
+    </p>
+    <p>
+        axios<br />
+        axios.get(地址?key=value&key2=value2).then(function(response){},function(err){})<br />
+        axios.post(地址,{key:value,key2:value2}).then(function(response){},function(err){})<br />
     </p>
 </body>
 </html>
